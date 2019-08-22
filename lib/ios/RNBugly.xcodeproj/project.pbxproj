@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EAAC590230E629500D2AB59 /* Bugly.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAAC58D230E629500D2AB59 /* Bugly.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RNBugly.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNBugly.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,10 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNBugly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNBugly.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EAAC58C230E629500D2AB59 /* BuglyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuglyConfig.h; sourceTree = "<group>"; };
+		8EAAC58D230E629500D2AB59 /* Bugly.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = Bugly.a; sourceTree = "<group>"; };
+		8EAAC58E230E629500D2AB59 /* Bugly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bugly.h; sourceTree = "<group>"; };
+		8EAAC58F230E629500D2AB59 /* BuglyLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuglyLog.h; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNBugly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNBugly.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNBugly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBugly.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EAAC590230E629500D2AB59 /* Bugly.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,10 +56,22 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				8EAAC58B230E629500D2AB59 /* Bugly */,
 				B3E7B5881CC2AC0600A0062D /* RNBugly.h */,
 				B3E7B5891CC2AC0600A0062D /* RNBugly.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		8EAAC58B230E629500D2AB59 /* Bugly */ = {
+			isa = PBXGroup;
+			children = (
+				8EAAC58C230E629500D2AB59 /* BuglyConfig.h */,
+				8EAAC58D230E629500D2AB59 /* Bugly.a */,
+				8EAAC58E230E629500D2AB59 /* Bugly.h */,
+				8EAAC58F230E629500D2AB59 /* BuglyLog.h */,
+			);
+			path = Bugly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,13 +221,20 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bugly",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNBugly;
 				SKIP_INSTALL = YES;
@@ -219,13 +244,20 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bugly",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNBugly;
 				SKIP_INSTALL = YES;

@@ -9,6 +9,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import Bugly from './lib/index';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -17,8 +18,23 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+const BuglyAppId = Platform.select({
+  ios: "745756234534241",
+  android: "34861783241672534"
+});
+
 type Props = {};
 export default class App extends Component<Props> {
+
+  componentDidMount() {
+
+    const config = {
+      debugMode: true
+    };
+
+    Bugly.startWithAppId(BuglyAppId, config)
+  }
+
   render() {
     return (
       <View style={styles.container}>

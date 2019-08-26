@@ -22,10 +22,7 @@ android {
         minSdkVersion safeExtGet('minSdkVersion', 16)
         targetSdkVersion safeExtGet('targetSdkVersion', 28)
 
-        ndk {
-            // 设置支持的SO库架构
-            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'//, 'x86', 'x86_64'
-        }
+        ndk safeExtGet('ndk', { abiFilters 'armeabi-v7a', 'x86' })
     }
     lintOptions {
         warning 'InvalidPackage', 'MissingPermission'

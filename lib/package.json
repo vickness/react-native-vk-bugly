@@ -1,8 +1,7 @@
-
 {
   "name": "react-native-vk-bugly",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "react-native library for bugly",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,8 +12,12 @@
     "crash"
   ],
   "author": "",
-  "license": "",
+  "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.58.6"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/vickness/react-native-vk-bugly/issues"
+  },
+  "homepage": "https://github.com/vickness/react-native-vk-bugly#readme"
 }

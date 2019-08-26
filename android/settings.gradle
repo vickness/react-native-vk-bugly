@@ -1,5 +1,5 @@
 rootProject.name = 'example'
 
 include ':app'
-include ':reactlibrary'
-project(':reactlibrary').projectDir = new File('../lib/android')
+include ':rnbugly'
+project(':rnbugly').projectDir = new File('../lib/android')

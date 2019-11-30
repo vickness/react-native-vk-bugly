@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/vickness/react-native-vk-bugly.git" }
   s.source_files  = "ios/**/*.{h,m}"
 
+  s.dependency 'Bugly'
   s.dependency "React"
 
 end
